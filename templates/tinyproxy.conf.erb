@@ -1,4 +1,4 @@
-# Managed by puppet , do not edit it !!
+# Managed by puppet, do not edit it !!
 
 Listen <%= @listen %>
 <% if @bind -%>
@@ -15,7 +15,9 @@ Allow <%= allow_host %>
 Deny <%= deny_host %>
 <% end -%>
 <% end -%>
-ConnectPort <%= @connect_port %>
+<% @connect_port.each do |conn_port| -%>
+  ConnectPort <%= conn_port %>
+<% end -%>
 <% if @error_files -%>
 <% @error_files.each_pair do |code, location| -%>
 ErrorFile <%= code %> "<%= location %>"

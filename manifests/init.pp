@@ -55,7 +55,7 @@ class tinyproxy (
   Integer $timeout,
   Array $allow,
   Optional[Array] $deny,
-  Integer $connect_port,
+  Array $connect_port,
   Optional[Hash[Integer, String]] $error_files,
   Optional[String] $default_error_file,
   Optional[String] $stat_host,

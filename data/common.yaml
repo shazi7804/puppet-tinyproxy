@@ -9,10 +9,12 @@ tinyproxy::listen: '0.0.0.0'
 tinyproxy::bind: ~
 tinyproxy::bind_same: ~
 tinyproxy::timeout: 60
-tinyproxy::allow: 
+tinyproxy::allow:
   - '127.0.0.1/32'
 tinyproxy::deny: ~
-tinyproxy::connect_port: 443
+tinyproxy::connect_port:
+  - '80'
+  - '443'
 tinyproxy::error_files: ~
 tinyproxy::default_error_file: '/usr/share/tinyproxy/default.html'
 tinyproxy::stat_host: ~
@@ -36,3 +38,4 @@ tinyproxy::port: 3128
 tinyproxy::start_servers: 32
 tinyproxy::via_proxy_name: 'tinyproxy'
 tinyproxy::disable_via_header: false
+
